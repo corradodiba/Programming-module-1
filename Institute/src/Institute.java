@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Institute {
@@ -29,7 +30,7 @@ public class Institute {
 
 
         // Main
-        int choice = 0;
+        int choice;
 
         do {
                 System.out.println("\n******************** Menu ********************");
@@ -41,26 +42,32 @@ public class Institute {
                 System.out.println("6.Visualizza voti di uno studente");
                 System.out.println("7.Calcola media voti di uno studente");
 
-                choice = input.nextInt();
+                choice = input.next().charAt(0);
 
-            switch (choice) {
+            try{
+                switch (choice) {
 
-                case 1: System.out.println(institute.toString());
-                break;
+                    case '1':
+                        System.out.println(institute.toString());
+                        break;
 
-                case 2: Subject.addSubject(courses);
-                break;
+                    case '2':
+                        Subject.addSubject(courses);
+                        break;
 
-                case 3: Student.addStudent(courses);
-                break;
+                    case '3':
+                        Student.addStudent(courses);
+                        break;
 
-                case 4: Student.printStudents(courses);
-                break;
+                    case '4':
+                        Student.printStudents(courses);
+                        break;
 
-                case 5: Course.printAllCourses(courses);
+                    case '5':
+                        Course.printAllCourses(courses);
                         int progressiveNumber = input.nextInt();
 
-                        if(Course.searchCourse(courses, progressiveNumber) == -1) {
+                        if (Course.searchCourse(courses, progressiveNumber) == -1) {
                             System.out.println("Corso non presente in archivio");
                         }
                         int course = Course.searchCourse(courses, progressiveNumber);
@@ -72,12 +79,13 @@ public class Institute {
 
                         Student student = Student.searchStudent(courses.get(course).getStudents(), matriculationCode);
                         Student.addRowToBooklet(student);
-                break;
+                        break;
 
-                case 6: Course.printAllCourses(courses);
+                    case '6':
+                        Course.printAllCourses(courses);
                         progressiveNumber = input.nextInt();
 
-                        if(Course.searchCourse(courses, progressiveNumber) == -1) {
+                        if (Course.searchCourse(courses, progressiveNumber) == -1) {
                             System.out.println("Corso non presente in archivio");
                         }
                         course = Course.searchCourse(courses, progressiveNumber);
@@ -87,12 +95,13 @@ public class Institute {
                         matriculationCode = input.nextLine();
                         student = Student.searchStudent(courses.get(course).getStudents(), matriculationCode);
                         System.out.println(student.bookletToString());
-                break;
+                        break;
 
-                case 7: Course.printAllCourses(courses);
+                    case '7':
+                        Course.printAllCourses(courses);
                         progressiveNumber = input.nextInt();
 
-                        if(Course.searchCourse(courses, progressiveNumber) == -1) {
+                        if (Course.searchCourse(courses, progressiveNumber) == -1) {
                             System.out.println("Corso non presente in archivio");
                         }
                         course = Course.searchCourse(courses, progressiveNumber);
@@ -102,16 +111,22 @@ public class Institute {
                         matriculationCode = input.nextLine();
                         student = Student.searchStudent(courses.get(course).getStudents(), matriculationCode);
                         Student.averageBooklet(student.getBooklet());
-                break;
+                        break;
 
 
-
-                default: System.out.println("[***] Opzione non disponibile, riprova");
-                break;
-
+                    default:
+                        System.out.println("[***] Opzione non disponibile, riprova");
+                        break;
+                }
+            }
+            catch (InputMismatchException inputException){
+                System.out.println("[***] Errore: Hai inserito un tipo di dato errato");
+            }
+            catch (ArrayIndexOutOfBoundsException arrayException){
+                System.out.println("[***] Errore: Il parametro inserito non trova alcun riferimento");
             }
         }
-        while(choice != 0);
+        while(choice != '0');
     }
 
 

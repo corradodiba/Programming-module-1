@@ -17,12 +17,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Institute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="67">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5650#5651#0" expanded="true" />
-                <element signature="e#5695#5696#0" expanded="true" />
+                <element signature="e#6298#6299#0" expanded="true" />
+                <element signature="e#6343#6344#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,9 +113,9 @@
         <option value="$PROJECT_DIR$/src/rowBooklet.java" />
         <option value="$PROJECT_DIR$/src/Student.java" />
         <option value="$PROJECT_DIR$/src/RowBooklet.java" />
-        <option value="$PROJECT_DIR$/src/Institute.java" />
         <option value="$PROJECT_DIR$/src/Course.java" />
         <option value="$PROJECT_DIR$/src/Subject.java" />
+        <option value="$PROJECT_DIR$/src/Institute.java" />
       </list>
     </option>
   </component>
@@ -130,8 +130,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -182,16 +182,18 @@
       <workItem from="1554724348209" duration="859000" />
       <workItem from="1554746540477" duration="23348000" />
       <workItem from="1555105389820" duration="106000" />
+      <workItem from="1555274168653" duration="405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38818000" />
+    <option name="totallyTimeSpent" value="39223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="285" y="41" width="1437" height="999" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25307304" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25668836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -261,12 +263,12 @@
     <entry file="file://$PROJECT_DIR$/src/rowBooklet.java" />
     <entry file="file://$PROJECT_DIR$/src/Institute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="67">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5650#5651#0" expanded="true" />
-            <element signature="e#5695#5696#0" expanded="true" />
+            <element signature="e#6298#6299#0" expanded="true" />
+            <element signature="e#6343#6344#0" expanded="true" />
           </folding>
         </state>
       </provider>
